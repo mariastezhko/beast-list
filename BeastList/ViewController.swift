@@ -17,6 +17,12 @@ class ViewController: UIViewController {
     @IBOutlet weak var taskTextField: UITextField!
     
     @IBAction func beastButtonPressed(_ sender: UIButton) {
+    
+        if let data = taskTextField.text {
+                tasks.append(data)
+        }
+        tableView.reloadData()
+    
     }
     
     override func viewDidLoad() {
