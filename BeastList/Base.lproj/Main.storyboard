@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BeastList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0dP-wg-8s3">
+                                <rect key="frame" x="0.0" y="58" width="375" height="609"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MyCell" id="xdf-jw-Y3k">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xdf-jw-Y3k" id="2eB-iI-xvc">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6BC-yz-A0x">
+                                <rect key="frame" x="16" y="20" width="284" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="X8U-pG-caZ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V4b-F8-3M5">
+                                <rect key="frame" x="313" y="20" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="B6R-7K-tHf"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="Mu4-0z-bkX"/>
+                                    <constraint firstAttribute="height" constant="30" id="cgd-dj-nIW"/>
+                                    <constraint firstAttribute="width" constant="46" id="z98-Wn-F5a"/>
+                                </constraints>
+                                <state key="normal" title="Beast"/>
+                                <connections>
+                                    <action selector="beastButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pab-BK-IaN"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0dP-wg-8s3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="2Ti-0x-2ED"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="V4b-F8-3M5" secondAttribute="trailing" constant="16" id="5KT-s9-Kpx"/>
+                            <constraint firstItem="6BC-yz-A0x" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="EdV-Ob-b8a"/>
+                            <constraint firstItem="0dP-wg-8s3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Lc4-q9-Od4"/>
+                            <constraint firstItem="0dP-wg-8s3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="NOh-De-D7H"/>
+                            <constraint firstItem="0dP-wg-8s3" firstAttribute="top" secondItem="6BC-yz-A0x" secondAttribute="bottom" constant="8" id="RPq-g9-iR1"/>
+                            <constraint firstItem="0dP-wg-8s3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YqK-A6-i70"/>
+                            <constraint firstItem="V4b-F8-3M5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="jK1-u3-Jw3"/>
+                            <constraint firstItem="0dP-wg-8s3" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="l1B-iK-Qna"/>
+                            <constraint firstItem="6BC-yz-A0x" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wKw-pQ-sLW"/>
+                            <constraint firstItem="V4b-F8-3M5" firstAttribute="leading" secondItem="6BC-yz-A0x" secondAttribute="trailing" constant="13" id="wpJ-jZ-wnl"/>
+                            <constraint firstItem="0dP-wg-8s3" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="xsA-eP-mCp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="0dP-wg-8s3" id="Fo5-cV-WUi"/>
+                        <outlet property="taskTextField" destination="6BC-yz-A0x" id="Ioz-PH-ONb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
